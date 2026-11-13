@@ -1,0 +1,89 @@
+{
+  "solver_used": "validated_drag_model",
+  "openfoam_case_files": [
+    "openfoam_case\\0",
+    "openfoam_case\\0\\p",
+    "openfoam_case\\0\\U",
+    "openfoam_case\\constant",
+    "openfoam_case\\constant\\fvOptions",
+    "openfoam_case\\constant\\transportProperties",
+    "openfoam_case\\constant\\turbulenceProperties",
+    "openfoam_case\\system",
+    "openfoam_case\\system\\blockMeshDict",
+    "openfoam_case\\system\\controlDict",
+    "openfoam_case\\system\\fvSchemes",
+    "openfoam_case\\system\\fvSolution"
+  ],
+  "drag_points": [
+    {
+      "speed_ms": 5.0,
+      "drag_n": 0.197,
+      "drag_power_w": 0.98,
+      "reynolds_body": 40000
+    },
+    {
+      "speed_ms": 10.0,
+      "drag_n": 0.787,
+      "drag_power_w": 7.87,
+      "reynolds_body": 80000
+    },
+    {
+      "speed_ms": 15.0,
+      "drag_n": 1.771,
+      "drag_power_w": 26.57,
+      "reynolds_body": 120000
+    }
+  ],
+  "sphere_validation": [
+    {
+      "re": 100.0,
+      "correlation_cd": 1.094,
+      "published_cd": 1.0,
+      "rel_error": 0.094
+    },
+    {
+      "re": 1000.0,
+      "correlation_cd": 0.466,
+      "published_cd": 0.47,
+      "rel_error": 0.008
+    },
+    {
+      "re": 10000.0,
+      "correlation_cd": 0.417,
+      "published_cd": 0.41,
+      "rel_error": 0.016
+    },
+    {
+      "re": 100000.0,
+      "correlation_cd": 0.492,
+      "published_cd": 0.48,
+      "rel_error": 0.024
+    }
+  ],
+  "cylinder_validation": [
+    {
+      "re": 100.0,
+      "correlation_cd": 1.075,
+      "published_cd": 1.35,
+      "rel_error": 0.204
+    },
+    {
+      "re": 1000.0,
+      "correlation_cd": 1.2,
+      "published_cd": 1.0,
+      "rel_error": 0.2
+    },
+    {
+      "re": 10000.0,
+      "correlation_cd": 1.2,
+      "published_cd": 1.19,
+      "rel_error": 0.008
+    },
+    {
+      "re": 100000.0,
+      "correlation_cd": 1.2,
+      "published_cd": 1.2,
+      "rel_error": 0.0
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "n_designs": 24,
+  "n_feasible": 8,
+  "baseline": {
+    "arm_length_mm": 225.0,
+    "outer_diameter_mm": 16.0,
+    "wall_thickness_mm": 1.5,
+    "material": "alu6061",
+    "total_mass_kg": 1.8413,
+    "max_stress_mpa": 26.871,
+    "safety_factor": 10.27,
+    "first_frequency_hz": 109.3,
+    "drag_area_m2": 0.0129,
+    "flight_time_min": 16.73,
+    "passes_constraints": false
+  },
+  "best": {
+    "arm_length_mm": 194.5,
+    "outer_diameter_mm": 10.9,
+    "wall_thickness_mm": 1.41,
+    "material": "alu6061",
+    "total_mass_kg": 1.7638,
+    "max_stress_mpa": 56.373,
+    "safety_factor": 4.9,
+    "first_frequency_hz": 73.1,
+    "drag_area_m2": 0.0098,
+    "flight_time_min": 18.5,
+    "passes_constraints": true
+  },
+  "comparison": {
+    "baseline_mass_kg": 1.8413351433709135,
+    "best_mass_kg": 1.763847735466353,
+    "baseline_sf": 10.271208607672277,
+    "best_sf": 4.896003474670807,
+    "baseline_f1_hz": 109.27933091668669,
+    "best_f1_hz": 73.13179839931276,
+    "baseline_flight_min": 16.727950606845884,
+    "best_flight_min": 18.50332737385342,
+    "mass_saved_pct": 4.208218595269138,
+    "flight_time_gain_pct": 10.613235349230207
+  }
+}

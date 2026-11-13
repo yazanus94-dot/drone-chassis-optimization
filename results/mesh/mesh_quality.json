@@ -1,0 +1,18 @@
+{
+  "structural": {
+    "element_counts": {
+      "11": 2510
+    },
+    "min_scaled_jacobian": -1.1250477740450253,
+    "mean_scaled_jacobian": 0.985973651513453,
+    "worst_fraction_below_0p2": 0.010358565737051793
+  },
+  "flow": {
+    "element_counts": {
+      "2": 18430
+    },
+    "min_scaled_jacobian": 0.9999999999999994,
+    "mean_scaled_jacobian": 1.0,
+    "worst_fraction_below_0p2": 0.0
+  }
+}

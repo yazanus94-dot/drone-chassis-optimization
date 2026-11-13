@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drone-chassis-optimization"
+version = "1.0.0"
+description = "Multi-physics design optimization of an electric drone chassis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "pybamm",
+    "cadquery",
+    "gmsh",
+    "casadi",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "hypothesis", "ruff", "mypy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E402"]
+"cad/*.py" = ["E402"]
+"mesh/*.py" = ["E402"]
+"simulation/**/*.py" = ["E402"]
+"battery/*.py" = ["E402"]
+"optimization/*.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

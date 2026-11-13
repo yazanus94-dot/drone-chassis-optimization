@@ -1,0 +1,61 @@
+{
+  "solver_used": "validated_beam_model",
+  "calculix_decks": [
+    "hover.inp",
+    "max_thrust.inp",
+    "landing.inp",
+    "modal.inp"
+  ],
+  "beam_model": {
+    "loads_n": {
+      "hover": 4.3424307509964555,
+      "max_thrust": 9.553347652192203,
+      "landing": 104.21833802391494
+    },
+    "stresses_mpa": {
+      "hover_mpa": 4.306528495208915,
+      "max_thrust_mpa": 9.474362689459614,
+      "landing_mpa": 103.35668388501396
+    },
+    "max_stress_mpa": 103.35668388501396,
+    "safety_factor": 8.70770971136482,
+    "tip_deflection_mm": 0.14939534955957118,
+    "first_frequency_hz": 157.71274939269574,
+    "motor_band_hz": [
+      100.0,
+      300.0
+    ],
+    "mesh_convergence": {
+      "n_elements": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "fem_tip_mm": [
+        0.15069718074063734,
+        0.1503434222675257,
+        0.15019838129353302,
+        0.15013382037265208,
+        0.15010352979868152,
+        0.15008888196886153
+      ],
+      "rel_error": [
+        0.00871400070286028,
+        0.006346065729284885,
+        0.005375212390005784,
+        0.004943064260420183,
+        0.004740309796778251,
+        0.0046422623685069275
+      ],
+      "theory_tip_mm": 0.14939534955957118
+    }
+  },
+  "plots": [
+    "stress_distribution.png",
+    "mesh_convergence.png",
+    "mode_shapes.png"
+  ]
+}

@@ -1,0 +1,8 @@
+FoamFile {version 2.0; format ascii; class dictionary; object controlDict;}
+application simpleFoam;
+startFrom latestTime;
+endTime 1500;
+deltaT 1;
+writeControl timeStep;
+writeInterval 250;
+functions {drag {type forceCoeffs; patches (walls); rho rhoInf; rhoInf 1.225; CofR (0 0 0); liftDir (0 1 0); dragDir (1 0 0); pitchAxis (0 0 1); magUInf 15.0; lRef 0.3; Aref 0.05;}};

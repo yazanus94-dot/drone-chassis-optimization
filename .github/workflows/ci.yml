@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install numpy matplotlib scipy pybamm cadquery gmsh casadi pillow pytest pytest-cov hypothesis ruff mypy
+      - name: Lint
+        run: python -m ruff check src tests cad mesh simulation battery optimization scripts
+      - name: Type check
+        run: python -m mypy src
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install numpy matplotlib scipy pybamm cadquery gmsh casadi pillow pytest pytest-cov hypothesis
+      - name: Unit and property tests
+        run: python -m pytest tests/unit tests/property -v
+      - name: Integration tests
+        run: python -m pytest tests/integration -v
+      - name: Coverage
+        run: python -m pytest tests/unit tests/property --cov=drone_chassis --cov-report=term-missing
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install numpy matplotlib scipy pybamm cadquery gmsh casadi pillow
+      - name: Pipeline smoke run
+        run: |
+          export PYTHONPATH=$PWD/src
+          python run_all.py --out ${{ runner.temp }}/smoke_results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-artifacts
+          path: ${{ runner.temp }}/smoke_results
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: [quality, tests]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker compose build

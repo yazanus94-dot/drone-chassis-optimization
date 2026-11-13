@@ -1,0 +1,9 @@
+{
+  "payload_kg": 0.5,
+  "hover_minutes": 20.0,
+  "max_speed_ms": 15.0,
+  "thrust_to_weight_min": 2.0,
+  "wheelbase_mm": 450.0,
+  "pack_cells_series": 4,
+  "pack_capacity_ah": 5.0
+}

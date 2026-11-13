@@ -1,0 +1,13 @@
+services:
+  drone-chassis:
+    build: .
+    image: drone-chassis-optimization:1.0.0
+    container_name: drone-chassis-pipeline
+    command: python run_all.py --out /app/results
+    volumes:
+      - ./results:/app/results
+    environment:
+      - MPLBACKEND=Agg
+      - OPENBLAS_NUM_THREADS=2
+      - OMP_NUM_THREADS=2
+    restart: "no"

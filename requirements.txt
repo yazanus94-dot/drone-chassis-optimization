@@ -1,0 +1,13 @@
+numpy==2.5.4
+matplotlib==3.11.2
+scipy==1.18.1
+pytest==9.2.0
+pytest-cov==7.1.0
+hypothesis==6.170.15
+ruff==0.17.5
+mypy==2.4.1
+pybamm==26.10.1.1
+cadquery==2.8.0
+gmsh==4.15.2
+casadi==3.8.1
+pillow==13.0.0

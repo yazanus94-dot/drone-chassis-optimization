@@ -1,0 +1,2 @@
+FoamFile {version 2.0; format ascii; class dictionary; object fvOptions;}
+momentumSource {type actuatorDisk; selectionMode cellZone; cellZone rotorDisk; thrust 4.40; diskArea 1.815e-09; direction (-1 0 0);}

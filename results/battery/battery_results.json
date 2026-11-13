@@ -1,0 +1,23 @@
+{
+  "model": "PyBaMM SPMe (Chen2020)",
+  "hover_power_w": 172.66,
+  "flight_time_min_25c": 18.92,
+  "temperature_sweep": [
+    {
+      "ambient_temp_c": -10.0,
+      "flight_time_min": 16.91
+    },
+    {
+      "ambient_temp_c": 0.0,
+      "flight_time_min": 17.49
+    },
+    {
+      "ambient_temp_c": 25.0,
+      "flight_time_min": 18.92
+    },
+    {
+      "ambient_temp_c": 40.0,
+      "flight_time_min": 19.83
+    }
+  ]
+}

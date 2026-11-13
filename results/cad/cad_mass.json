@@ -1,0 +1,15 @@
+{
+  "arm": {
+    "material": "carbon",
+    "outer_diameter_mm": 16.0,
+    "wall_thickness_mm": 1.5,
+    "length_mm": 225.0
+  },
+  "cad_mass_kg": 0.36225,
+  "cad_center_of_gravity_mm": [
+    0.0,
+    -0.0,
+    0.0
+  ],
+  "gravity_accel_ms2": 9.81
+}
