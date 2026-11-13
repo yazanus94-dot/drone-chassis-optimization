@@ -5,8 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        libgl1 libglx-mesa0 libgomp1 libglib2.0-0 libx11-6 libxext6 libfontconfig1 \
-        calculix-ccx \
+        libgl1 libglu1-mesa libglx-mesa0 libgomp1 libglib2.0-0 libx11-6 libxext6 libfontconfig1 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
